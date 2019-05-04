@@ -10,28 +10,35 @@
 #include <iostream>
 using namespace std;
 
+
+//Clase Padre
+
 class Volumen {
+protected:
     string nombre;
     int numVol;
 public:
-    explicit Volumen(string name);
+    Volumen(string name, int num);
     string get_nombre();
-    void mostar();
+    virtual void mostrar() = 0;
     ~Volumen();
 };
+
+
+// Clases hijas
 
 class Libro : public Volumen{
     int numLibros;
 public:
-    explicit Libro(string nombre);
-    void mostrar();
+    Libro(string nombre, int num, int vol);
+    void mostrar() override;
 };
 
 class Revista : public Volumen{
     int numRevistas;
 public:
-    explicit Revista(string nombre);
-    void mostrar();
+    Revista(string nombre, int num, int vol);
+    void mostrar() override;
 };
 
 

@@ -3,4 +3,4 @@ project(agregacion_y_herencia_JeanleeRoy)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(agregacion_y_herencia_JeanleeRoy main.cpp Biblioteca.cpp Biblioteca.h Volumen.cpp Volumen.h)
+add_executable(agregacion_y_herencia_JeanleeRoy main.cpp Biblioteca.cpp Biblioteca.h Volumen.cpp Volumen.h catch.hpp testBiblioteca.cpp)

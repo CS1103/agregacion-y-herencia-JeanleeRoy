@@ -4,36 +4,24 @@
 
 #include "Volumen.h"
 
-Volumen::Volumen(string name):nombre{name} {
-    this->numVol++;
-}
+Volumen::Volumen(string name, int num):nombre{name},numVol{num} {}
 
 string Volumen::get_nombre() {
     return nombre;
-}
-
-void Volumen::mostar() {
-    cout<<"Volumen #"<<numVol+1<<" ";
 }
 
 Volumen::~Volumen() {
 
 }
 
-Libro::Libro(string nombre):Volumen{nombre} {
-    this->numLibros++;
-}
+Libro::Libro(string nombre, int num, int vol):Volumen(nombre,vol), numLibros{num} {}
 
 void Libro::mostrar() {
-    Volumen::mostar();
-    cout<<"Libro #"<<numLibros<<" titulo: "<<get_nombre();
+    cout<<"Volumen #"<<numVol<<" Libro #"<<numLibros<<" titulo: "<<nombre<<endl;
 }
 
-Revista::Revista(string nombre) : Volumen(nombre) {
-    this->numRevistas++;
-}
+Revista::Revista(string nombre, int num, int vol):Volumen(nombre,vol),numRevistas{num} {}
 
 void Revista::mostrar() {
-    Volumen::mostar();
-    cout<<"Revista #"<<numRevistas<<" titulo: "<<get_nombre();
+    cout<<"Volumen #"<<numVol<<" Revista #"<<numRevistas<<" titulo: "<<nombre<<endl;
 }

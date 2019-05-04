@@ -11,11 +11,13 @@
 class Biblioteca {
     int maxLibros;
     int maxRevistas;
+    int numVolumenes;
     vector<Volumen* > volumenes;
 public:
     Biblioteca(int lib, int rev);
+    int nVolumenes();
     void mostrarBiblioteca();
-    void incluir(Volumen& entrada);
+    void incluir(Volumen* entrada);
 };
 
 
